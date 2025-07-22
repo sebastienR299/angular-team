@@ -1,0 +1,27 @@
+.container {
+  padding: 1rem;
+  margin: auto;
+  max-width: 1280px;
+}
+
+p {
+  line-height: 2;
+}
+
+code {
+  padding: 0.2rem;
+  background-color: oklch(93% 0.034 272.788);
+  border-radius: 4px;
+}
+
+.hint-error {
+  color: red;
+}
+
+.mat-grid-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

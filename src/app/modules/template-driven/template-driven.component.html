@@ -1,0 +1,60 @@
+<div class="container">
+    <mat-accordion multi>
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Formulaire avec validation direct
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <form #formReference="ngForm" (ngSubmit)="formReference.form.valid && onSubmit(formReference)">
+                <mat-grid-list [cols]="3" rowHeight="3:1">
+                    <mat-grid-tile>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nom</mat-label>
+                            <input matInput ngModel #name="ngModel" name="name" required autocomplete="off">
+                            <mat-hint class="hint-error" *ngIf="name.invalid && name.touched">Nom invalide</mat-hint>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput ngModel #email="ngModel" name="email" required email autocomplete="off">
+                            <mat-hint class="hint-error" *ngIf="email.invalid && email.touched">Email invalide</mat-hint>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <button [disabled]="!formReference.form.valid" mat-raised-button color="primary">Soumettre</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </form>
+        </mat-expansion-panel>
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Formulaire avec validation direct
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <form #secondForm="ngForm" (ngSubmit)="secondForm.form.valid && onSubmit(secondForm)" novalidate>
+                <mat-grid-list [cols]="3" rowHeight="3:1">
+                    <mat-grid-tile>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nom</mat-label>
+                            <input matInput ngModel #name="ngModel" name="name" required autocomplete="off">
+                            <mat-hint class="hint-error" *ngIf="secondForm.submitted && name.invalid">Nom invalide</mat-hint>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput ngModel #email="ngModel" name="email" required email autocomplete="off">
+                            <mat-hint class="hint-error" *ngIf="email.invalid && email.touched">Email invalide</mat-hint>
+                        </mat-form-field>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                        <button mat-raised-button color="primary">Soumettre</button>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </form>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>

@@ -17,6 +17,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import { OnchangeComponent } from './modules/onchanges/onchange.component';
 import { ChildOnchangeComponent } from './modules/onchanges/child-onchanges/child-onchange.component';
+import { TemplateDrivenComponent } from './modules/template-driven/template-driven.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ChildOnchangeComponent } from './modules/onchanges/child-onchanges/chil
         ToolbarComponent,
         NgmodelComponent,
         OnchangeComponent,
-        ChildOnchangeComponent
+        ChildOnchangeComponent,
+        TemplateDrivenComponent
     ],
     imports: [
         BrowserModule,
