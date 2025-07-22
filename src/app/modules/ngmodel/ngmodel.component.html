@@ -1,16 +1,16 @@
 <div class="container">
     <mat-accordion multi>
-        <mat-expansion-panel>
+        <mat-expansion-panel expanded>
             <mat-expansion-panel-header>
-                <mat-panel-description>
+                <mat-panel-title>
                     Exemple basique
-                </mat-panel-description>
+                </mat-panel-title>
             </mat-expansion-panel-header>
             <mat-grid-list [cols]="3" rowHeight="3:1">
                 <mat-grid-tile>
                     <mat-form-field appearance="outline">
                         <mat-label>Username</mat-label>
-                        <input matInput [(ngModel)]="username">
+                        <input matInput [(ngModel)]="username" autocomplete="off">
                     </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile>
@@ -25,17 +25,18 @@
             </mat-grid-list>
         </mat-expansion-panel>
 
-        <mat-expansion-panel>
+        <mat-expansion-panel expanded>
             <mat-expansion-panel-header>
-                <mat-panel-description>
+                <mat-panel-title>
                     Exemple avec modification sur les changements
-                </mat-panel-description>
+                </mat-panel-title>
             </mat-expansion-panel-header>
             <mat-grid-list [cols]="3" rowHeight="3:1">
                 <mat-grid-tile>
                     <mat-form-field appearance="outline">
                         <mat-label>Firstname</mat-label>
-                        <input matInput [ngModel]="firstname" (ngModelChange)="handleFirstnameChange($event)">
+                        <input matInput [ngModel]="firstname" (ngModelChange)="handleFirstnameChange($event)"
+                               autocomplete="off">
                     </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile>

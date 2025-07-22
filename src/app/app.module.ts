@@ -15,12 +15,16 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import { OnchangeComponent } from './modules/onchanges/onchange.component';
+import { ChildOnchangeComponent } from './modules/onchanges/child-onchanges/child-onchange.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         ToolbarComponent,
-        NgmodelComponent
+        NgmodelComponent,
+        OnchangeComponent,
+        ChildOnchangeComponent
     ],
     imports: [
         BrowserModule,

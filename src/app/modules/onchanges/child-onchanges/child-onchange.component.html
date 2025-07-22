@@ -1,0 +1,23 @@
+<div>
+    <mat-grid-list [cols]="3" rowHeight="3:1">
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Previous value</mat-label>
+                <input matInput disabled [ngModel]="previousFirstname">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>Current value</mat-label>
+                <input matInput disabled [ngModel]="currentFirstname">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <mat-form-field appearance="outline">
+                <mat-label>First change ?</mat-label>
+                <input matInput disabled [ngModel]="isFirstChanged ? 'Vrai' : 'Faux'">
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="container">
+    <mat-accordion multi>
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Composant parent
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-grid-list [cols]="3" rowHeight="3:1">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Firstname</mat-label>
+                        <input matInput [(ngModel)]="firstname" autocomplete="off">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="2">
+                    <p>L'interface <code>OnChanges</code> nous permet d'avoir un certain contrôle sur les valeurs de nos <code>@Input</code>, on peut savoir si c'est le premier changement, récupérer la valeur courante, ainsi que la valeur précédente.</p>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel expanded>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Composant enfant
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-child-onchange [firstname]="firstname"></app-child-onchange>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
