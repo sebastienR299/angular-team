@@ -1,0 +1,16 @@
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: oklch(92.8% 0.006 264.531);
+}
+
+mat-tab {
+  height: 100%;
+}

@@ -1,0 +1,55 @@
+<div class="container">
+    <mat-accordion multi>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-description>
+                    Exemple basique
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-grid-list [cols]="3" rowHeight="3:1">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input matInput [(ngModel)]="username">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Username</mat-label>
+                        <input disabled matInput [ngModel]="username">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <p>Comportement basique avec un simple <code>[(ngModel)]</code>.</p>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-description>
+                    Exemple avec modification sur les changements
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-grid-list [cols]="3" rowHeight="3:1">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Firstname</mat-label>
+                        <input matInput [ngModel]="firstname" (ngModelChange)="handleFirstnameChange($event)">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Firstname en majuscule</mat-label>
+                        <input disabled matInput [ngModel]="firstnameAfterModification">
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <p>On utilise le <code>[ngModel]</code> pour la récupération de la valeur, mais on utilise le <code>(ngModelChange)</code>
+                        pour faire des modifications aux changements.</p>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+
